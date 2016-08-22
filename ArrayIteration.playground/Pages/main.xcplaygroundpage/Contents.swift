@@ -15,6 +15,7 @@
  */
 // write your code here
 
+var ingredients: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -26,7 +27,7 @@
 // write your code here
 
 
-
+var list: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
@@ -37,7 +38,7 @@
 // write your code here
 
 
-
+print(list)
 
 
 
@@ -47,8 +48,9 @@
  */
 // write your code here
 
-
-
+for item in ingredients{
+    print("test " + item)
+}
 
 
 
@@ -58,9 +60,14 @@
  */
 // write your code here
 
+func shoppingCart(list:[String])  {
+    
+    for item in list {
+        print (item)
+    }
+}
 
-
-
+print(shoppingCart(ingredients))
 
 
 
@@ -69,8 +76,22 @@
  */
 // write your code here
 
+var names = ["Jamie", "Michael", "Bruce", "Randi"]
 
+func greet(names:[String]) {
+    
+    for name in names {
+        
+        if name == "Michael" {
+        print ("Top of the morning \(name)!")
+    } else {
+        print ("Good morning \(name)!")
+    }
+    }
 
+}
+
+greet(names)
 
 
 
@@ -79,10 +100,17 @@
  */
 // write your code here
 
+var someArray:[Int] = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+func integersLessThan50 (arrayOfIntegers:[Int]) -> [Int]{
+    var newArray:[Int] = []
+    
+    for number in arrayOfIntegers {
+        if number < 50 {
+        newArray.append(number)
+        }
+    }
+    return newArray
+}
 
-
-
-
-
-
+print(integersLessThan50(someArray))
